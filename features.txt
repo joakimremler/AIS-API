@@ -1,0 +1,4 @@
+connect a plant API with all plants info
+
+api
+https://github.com/sckott/usdaplantsapi/

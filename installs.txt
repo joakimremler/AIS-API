@@ -1,0 +1,6 @@
+mysql installer
+https://dev.mysql.com/downloads/file/?id=467606
+
+COnsole:
+Install-Package Microsoft.AspNet.WebApi.HelpPage
+

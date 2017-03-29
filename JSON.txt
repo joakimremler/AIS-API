@@ -1,0 +1,13 @@
+{
+"Name": "Tomata",
+"SoilMoistureMin": 15,
+"SoilMoistureMax": 60,
+"SoilMoistureNow": 45,
+"Category": "Plant",
+"SunlightMin": 8,
+"SunlightMax": 42,
+"SunlightNow": 38,
+"ID_Type": 2,
+"StartDate": "2017-01-01T00:00:00",
+"Updated": "2017-03-20T21:45:06.4682312+01:00"
+}
