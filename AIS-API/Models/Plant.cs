@@ -19,6 +19,7 @@ namespace AIS_API.Models
         public int ID_Type { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime Updated { get; set; }
+        public string url { get; set; }
 
 
 

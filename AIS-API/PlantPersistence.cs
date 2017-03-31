@@ -62,6 +62,8 @@ namespace AIS_API
                 p.ID_Type = mySQLReader.GetInt32(9);
                 p.StartDate = mySQLReader.GetDateTime(10);
                 p.Updated = mySQLReader.GetDateTime(11);
+                p.url = mySQLReader.GetString(12);
+
                 plantArray.Add(p);
             }
 
@@ -105,7 +107,8 @@ namespace AIS_API
             if (mySQLReader.Read())
             {
                 mySQLReader.Close();
-                sqlString = "UPDATE tblplants SET Name='" + plantToSave.Name + "', SoilMoistureMin=" + plantToSave.SoilMoistureMin + ", SoilMoistureMax=" + plantToSave.SoilMoistureMax + ", SoilMoistureNow=" + plantToSave.SoilMoistureNow + ", Category='" + plantToSave.Category + "', SunlightMin=" + plantToSave.SunlightMin + ", SunlightMax=" + plantToSave.SunlightMax + ", SunlightNow=" + plantToSave.SunlightNow + ", ID_Type=" + plantToSave.ID_Type + ", StartDate='" + plantToSave.StartDate.ToString("yyyy-MM-dd HH:mm:ss") + "', Updated='" + plantToSave.Updated.ToString("yyyy-MM-dd HH:mm:ss") + "'WHERE ID = " + ID.ToString();
+                //sqlString = "UPDATE tblplants SET Name='" + plantToSave.Name + "', SoilMoistureMin=" + plantToSave.SoilMoistureMin + ", SoilMoistureMax=" + plantToSave.SoilMoistureMax + ", SoilMoistureNow=" + plantToSave.SoilMoistureNow + ", Category='" + plantToSave.Category + "', SunlightMin=" + plantToSave.SunlightMin + ", SunlightMax=" + plantToSave.SunlightMax + ", SunlightNow=" + plantToSave.SunlightNow + ", ID_Type=" + plantToSave.ID_Type + ", StartDate='" + plantToSave.StartDate.ToString("yyyy-MM-dd HH:mm:ss") + "', Updated='" + plantToSave.Updated.ToString("yyyy-MM-dd HH:mm:ss") + "'WHERE ID = " + ID.ToString();
+                sqlString = "UPDATE tblplants SET Name='" + plantToSave.Name + "', SoilMoistureMin=" + plantToSave.SoilMoistureMin + ", SoilMoistureMax=" + plantToSave.SoilMoistureMax + ", SoilMoistureNow=" + plantToSave.SoilMoistureNow + ", Category='" + plantToSave.Category + "', url='" + plantToSave.url + "', SunlightMin=" + plantToSave.SunlightMin + ", SunlightMax=" + plantToSave.SunlightMax + ", SunlightNow=" + plantToSave.SunlightNow + ", ID_Type=" + plantToSave.ID_Type + ", StartDate='" + plantToSave.StartDate.ToString("yyyy-MM-dd HH:mm:ss") + "', Updated='" + plantToSave.Updated.ToString("yyyy-MM-dd HH:mm:ss") + "'WHERE ID = " + ID.ToString();
                 cmd = new MySql.Data.MySqlClient.MySqlCommand(sqlString, conn);
                 cmd.ExecuteNonQuery();
                 return true;
@@ -141,6 +144,7 @@ namespace AIS_API
                 p.ID_Type = mySQLReader.GetInt32(9);
                 p.StartDate = mySQLReader.GetDateTime(10);
                 p.Updated = mySQLReader.GetDateTime(11);
+                p.url = mySQLReader.GetString(12);
 
                 return p;
             }
@@ -153,7 +157,7 @@ namespace AIS_API
         public long savePlant(Plant plantToSave)
         {
 
-            string sqlString = "INSERT INTO tblplants(Name, SoilMoistureMin, SoilMoistureMax, SoilMoistureNow, Category, SunlightMin, SunlightMax, SunlightNow, ID_Type, StartDate, Updated) VALUES ('" + plantToSave.Name + "', " + plantToSave.SoilMoistureMin + ", " + plantToSave.SoilMoistureMax + ", " + plantToSave.SoilMoistureNow + ", '" + plantToSave.Category + "', " + plantToSave.SunlightMin + ", " + plantToSave.SunlightMax + ", " + plantToSave.SunlightNow + ", " + plantToSave.ID_Type + ", '" + plantToSave.StartDate.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + plantToSave.Updated.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+            string sqlString = "INSERT INTO tblplants(Name, SoilMoistureMin, SoilMoistureMax, SoilMoistureNow, Category, SunlightMin, SunlightMax, SunlightNow, ID_Type, StartDate, Updated, url) VALUES ('" + plantToSave.Name + "', " + plantToSave.SoilMoistureMin + ", " + plantToSave.SoilMoistureMax + ", " + plantToSave.SoilMoistureNow + ", '" + plantToSave.Category + "', " + plantToSave.SunlightMin + ", " + plantToSave.SunlightMax + ", " + plantToSave.SunlightNow + ", " + plantToSave.ID_Type + ", '" + plantToSave.StartDate.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + plantToSave.Updated.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + plantToSave.url + "')";
             MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(sqlString, conn);
             cmd.ExecuteNonQuery();
             long id = cmd.LastInsertedId;
