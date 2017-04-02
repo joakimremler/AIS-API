@@ -1,7 +1,0 @@
-https://www.youtube.com/watch?v=birftXcqDjo
-8:00
-Cant get it to work!
-
-copy $(SolutionDir)AIS-API\bin2\AIS-API.xml $(ProjectDir)App_Data\AIS-API.xml
-copy C:\Users\Elin_Joakim\Documents\Visual Studio 2017\Projects\AIS-API\AIS-API C:\Users\Elin_Joakim\Documents\Visual Studio 2017\Projects\AIS-API\AIS-API\App_Data\AIS-API
-

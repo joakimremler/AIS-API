@@ -1,2 +1,0 @@
-If VS crashes then remove:
-C:\Users\USER_NAME\AppData\Local\Microsoft\VisualStudio\15.0_db2a872f
