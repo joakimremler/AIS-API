@@ -43,7 +43,7 @@ This project is written in C#
 
 2. Create a Database in Mysql called ais `CREATE DATABASE ais;`.
 
-3. Import `ais_tblplants.sql` Find the file in root directory and import it to Database ais.
+3. Import `ais_tblplants.sql` Find the file in root directory and import it to database ais.
 
     `mysql -u root -p ais < ais_tblplants.sql`
 
