@@ -38,7 +38,7 @@ This project is written in C#
 ## Packages
 * Microsoft.AspNet.WebApi.HelpPage
 
-## Installation (WRITE THIS!!!!!)
+## Installation
 1. Download repo: [AIS-API](https://github.com/joakimremler/AIS-API)
 
 2. Create a Database in Mysql called ais `CREATE DATABASE ais;`.
