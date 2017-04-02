@@ -39,16 +39,15 @@ This project is written in C#
 * Microsoft.AspNet.WebApi.HelpPage
 
 ## Installation (WRITE THIS!!!!!)
-1. Clone this repo and set folder Linkify to localhost or create a [Virtual directory](https://en.wikipedia.org/wiki/Virtual_directory)
-  `git clone git@github.com:joakimremler/Linkify.git`.
+1. Download repo: [AIS-API](https://github.com/joakimremler/AIS-API)
 
-2. Create a Database in Mysql called Linkify `CREATE DATABASE Linkify;`.
+2. Create a Database in Mysql called ais `CREATE DATABASE ais;`.
 
-3. Import `linkify.sql` MySql backup file. Navigate to assets/mysql and insert this line:
+3. Import `ais_tblplants.sql` Find the file in root directory and import it to Database ais.
 
-    `mysql -u root -p Linkify < linkify.sql`
+    `mysql -u root -p ais < ais_tblplants.sql`
 
-4. Edit your settings in core/init.php.
+4. Edit username and password to mysql in PlantPersistence.cs line 21.
 
 5. You're done, enjoy!
 
